@@ -26,17 +26,11 @@ class MainScreenState extends State<MainScreen> {
   void initState() {
     super.initState();
     pages = [
-      HomeScreen(
-        username: username,
-      ),
+      HomeScreen(username: username),
       SearchScreen(),
       ComingSoonScreen(),
-      DownloadsScreen(
-        username: username,
-      ),
-      MoreScreen(
-        username: username,
-      ),
+      DownloadsScreen(username: username),
+      MoreScreen(username: username),
     ];
   }
 
