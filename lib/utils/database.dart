@@ -18,6 +18,12 @@ class DataBase {
     }
   ];
 
+  static List banners = [
+    'netflix_1/assets/images/home_screen_banner.png',
+    'netflix_1/assets/images/Rectangle 26.png',
+    'netflix_1/assets/images/Rectangle 26.png',
+  ];
+
   static List previews = [
     'assets/images/Ellipse 2.png',
     'assets/images/Ellipse 3.png',

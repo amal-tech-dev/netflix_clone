@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_1/utils/database/database.dart';
+import 'package:netflix_1/utils/database.dart';
 import 'package:netflix_1/utils/color_constants.dart';
 import 'package:netflix_1/utils/image_constants.dart';
 import 'package:netflix_1/view/main_screen/home_screen/home_screen_widgets/movies_tile_builder.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({
@@ -19,15 +20,17 @@ class HomeScreen extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Container(
-                height: 400,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      'assets/images/home_screen_banner.png',
-                    ),
-                    fit: BoxFit.cover,
-                  ),
+              CarouselSlider.builder(
+                itemCount: 3,
+                itemBuilder: (context, index, realIndex) => Image.asset(
+                  DataBase.banners[index],
+                ),
+                options: CarouselOptions(
+                  autoPlay: true,
+                  height: 400,
+                  enlargeCenterPage: false,
+                  initialPage: 0,
+                  viewportFraction: 1,
                 ),
               ),
               Positioned(

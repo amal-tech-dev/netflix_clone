@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_1/utils/database/database.dart';
+import 'package:netflix_1/utils/database.dart';
 
 class NewArrivalsTileBuilder extends StatelessWidget {
   NewArrivalsTileBuilder({super.key});
